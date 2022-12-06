@@ -13,7 +13,7 @@ public class LRUCachePolicy implements CachePolicy {
 
     public void touch(String key, String... value) {
         ListNode node = data.get(key);
-        if (value != null) {
+        if (value.length!=0) {
             if (node == null) {
                 node = new ListNode(key, value[0]);
                 nodeList.appendNode(node);
